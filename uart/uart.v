@@ -24,8 +24,6 @@ reg [6:0] index;
 reg [1:0] status;
 reg [31:0] baudrate;
 reg [31:0] cursor;
-reg [7:0] data;
-reg [31:0] idle;
 reg out;
 
 wire [7:0] message [0:11];
@@ -49,7 +47,6 @@ always @ (posedge active, posedge clock) begin
 		index <= 0;
 		cursor <= 0;
 		status <= 2'b01;
-		idle <= 0;
 	end else begin
 		if (baudrate == 5000) begin
 			baudrate <= 0;
@@ -64,22 +61,6 @@ always @ (posedge active, posedge clock) begin
 					end
 				end
 				2'b11: begin
-//					case (cursor)
-//						0 : data = 104;
-//						1 : data = 101;
-//						2 : data = 108;
-//						3 : data = 108;
-//						4 : data = 111;
-//						5 : data = 32;
-//						6 : data = 119;
-//						7 : data = 111;
-//						8 : data = 114;
-//						9 : data = 108;
-//						10: data = 100;
-//						11: data = 33;
-//						default: data = 63;
-//					endcase
-//					out <= data[index];
 					out <= message[cursor][index];
 					if (index == 7) begin
 						index <= 0;

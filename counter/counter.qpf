@@ -27,4 +27,4 @@ DATE = "15:32:20  September 12, 2017"
 
 # Revisions
 
-PROJECT_REVISION = "led_test"
+PROJECT_REVISION = "counter"

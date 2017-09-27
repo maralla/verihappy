@@ -3,3 +3,16 @@ incremental_db
 *.qws
 *.bak
 *.summary
+*.asm.rpt
+*.cdf
+*.done
+*.fit.rpt
+*.fit.smsg
+*.flow.rpt
+*.jdi
+*.map.rpt
+*.map.smsg
+*.pin
+*.pof
+*.sof
+*.sta.rpt

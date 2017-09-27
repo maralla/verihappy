@@ -1,4 +1,4 @@
-module led_test(clock,reset,num,com);
+module counter(clock,reset,num,com);
 
 input clock,reset;
 output [7:0] num;
