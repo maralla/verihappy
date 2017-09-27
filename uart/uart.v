@@ -26,7 +26,7 @@ reg [31:0] baudrate;
 reg [31:0] cursor;
 reg out;
 
-wire [7:0] message [0:11];
+wire [7:0] message [0:12];
 
 assign message[0] = 104;
 assign message[1] = 101;
@@ -40,6 +40,7 @@ assign message[8] = 114;
 assign message[9] = 108;
 assign message[10] = 100;
 assign message[11] = 33;
+assign message[12] = 10;
 
 always @ (posedge active, posedge clock) begin
 	if (active) begin
@@ -65,7 +66,7 @@ always @ (posedge active, posedge clock) begin
 					if (index == 7) begin
 						index <= 0;
 						status <= 4'b10;
-						if (cursor == 11) begin
+						if (cursor == 12) begin
 							cursor <= 0;
 						end else begin
 							cursor <= cursor + 1;
