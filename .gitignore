@@ -1,5 +1,6 @@
 db
 incremental_db
+simulation
 *.qws
 *.bak
 *.summary
@@ -9,6 +10,7 @@ incremental_db
 *.fit.rpt
 *.fit.smsg
 *.flow.rpt
+*.eda.rpt
 *.jdi
 *.map.rpt
 *.map.smsg
